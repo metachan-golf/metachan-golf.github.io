@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>めたちゃんのGolf&Tech</title>
+
+  <!-- 10秒後に自動遷移（JSが無効でも動く保険） -->
+  <meta http-equiv="refresh" content="10;url=https://ameblo.jp/metachan-golf/" />
+
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background: #0b0f14;
+      color: #fff;
+    }
+    .wrap {
+      width: min(1100px, 95vw);
+      text-align: center;
+    }
+    .banner {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 12px 40px rgba(0,0,0,.45);
+      background: #111;
+    }
+    .meta {
+      margin-top: 14px;
+      opacity: .9;
+      font-size: 14px;
+    }
+    .meta a {
+      color: #7cc8ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .meta a:hover { text-decoration: underline; }
+    .count {
+      margin-top: 8px;
+      font-size: 13px;
+      opacity: .75;
+    }
+    .btn {
+      margin-top: 14px;
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(124,200,255,.16);
+      border: 1px solid rgba(124,200,255,.35);
+      color: #cfefff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .btn:hover { background: rgba(124,200,255,.22); }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <!-- 入口バナー：クリックでも遷移 -->
+    <a href="https://ameblo.jp/metachan-golf/" aria-label="ブログへ移動">
+      <img class="banner" src="PC-BlogTiltle-20251228.jpg" alt="めたちゃんのGolf&Tech" />
+    </a>
+
+    <div class="meta">
+      10秒後にブログへ移動します（<a href="https://ameblo.jp/metachan-golf/">すぐ移動</a>）
+    </div>
+    <div class="count" id="countdown">あと 10 秒</div>
+
+    <a class="btn" href="https://ameblo.jp/metachan-golf/">ブログへ入る</a>
+  </main>
+
+  <script>
+    // 10秒カウントダウン表示（見た目用）
+    const targetUrl = "https://ameblo.jp/metachan-golf/";
+    let sec = 10;
+    const el = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      sec--;
+      if (sec <= 0) {
+        clearInterval(timer);
+        location.href = targetUrl;
+        return;
+      }
+      el.textContent = `あと ${sec} 秒`;
+    }, 1000);
+  </script>
+</body>
+</html>
