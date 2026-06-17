@@ -429,6 +429,41 @@
     .text-link { color: var(--blue); font-weight: 900; }
     .text-link:hover { color: #003f7a; text-decoration: underline; }
 
+    .news-list {
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 24px;
+      padding: 22px 26px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .news-item:last-child { border-bottom: 0; }
+
+    .news-date {
+      color: var(--blue);
+      font-weight: 900;
+      font-size: .92rem;
+      letter-spacing: .04em;
+    }
+
+    .news-body h3 {
+      margin: 0 0 6px;
+      color: var(--deep);
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    .news-body p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .profile-wrap {
       display: grid;
       grid-template-columns: 330px 1fr;
@@ -544,6 +579,7 @@
       .service-cat { padding: 18px 24px; }
       .service-link { border-left: 0; border-top: 1px solid var(--line); justify-content: start; place-items: stretch; }
       .case-card { grid-template-columns: 1fr; gap: 12px; }
+      .news-item { grid-template-columns: 1fr; gap: 6px; padding: 20px; }
       .profile-wrap { grid-template-columns: 1fr; }
       .flow-grid { grid-template-columns: 1fr; }
     }
@@ -589,6 +625,7 @@
           <li class="nav-item"><a class="nav-link" href="#area">対応エリア</a></li>
           <li class="nav-item"><a class="nav-link" href="#cases">導入事例</a></li>
           <li class="nav-item"><a class="nav-link" href="#profile">プロフィール</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">更新履歴</a></li>
           <li class="nav-item ms-lg-2"><a class="btn-main py-2 px-3" href="#contact">お問い合わせ</a></li>
         </ul>
       </div>
@@ -659,7 +696,7 @@
         <div class="problem-card">
           <div class="number">ISSUE 04</div>
           <h3>ITに詳しい人がいない</h3>
-          <p>ベンダー提案の確認や、何を頼むべきかの整理など、身近な相談役として伴走します。</p>
+          <p>自社のITをお願いしている業者様への確認や、何を頼むべきかの整理など、身近な相談役として伴走します。</p>
         </div>
       </div>
     </div>
@@ -742,7 +779,7 @@
             <h3>尊建設様 Google Workspace活用支援</h3>
             <p>ドメイン取得、Google Workspace環境設定、PCセットアップを支援。業務で利用できるメール・クラウド環境の整備をサポートしました。</p>
           </div>
-          <span class="text-link">支援内容を見る</span>
+          <a class="text-link" href="#services">支援内容を見る →</a>
         </div>
         <div class="case-card">
           <div class="case-badge">PC導入支援</div>
@@ -750,7 +787,7 @@
             <h3>株式会社ナチュラルマインドデンキ 様のPC導入支援</h3>
             <p>PCやOA機器の購入サポートを実施。実際のPC購入からセットアップ、利用していたOutlookデータの移行まで支援しました。</p>
           </div>
-          <span class="text-link">支援内容を見る</span>
+          <a class="text-link" href="#services">支援内容を見る →</a>
         </div>
       </div>
     </div>
@@ -800,6 +837,41 @@
         <div class="flow-card"><div class="flow-number">01</div><h3>無料相談</h3><p>Web会議や電話で、現在のお困りごとを確認します。休日の日中帯や平日18時以降でも対応可能です。</p></div>
         <div class="flow-card"><div class="flow-number">02</div><h3>進め方の整理</h3><p>必要な作業、費用感、スケジュールをわかりやすく整理し、無理のない進め方をご提案します。</p></div>
         <div class="flow-card"><div class="flow-number">03</div><h3>導入・運用支援</h3><p>ホームページ作成、PC設定、業務効率化など、現場で使える形になるまで伴走します。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="section section-light">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">NEWS</div>
+        <div>
+          <h2 class="section-title">更新履歴</h2>
+          <p class="section-lead">めたちゃんDX相談所からのお知らせや、Webサイトの更新内容を掲載します。</p>
+        </div>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <div class="news-date">2026.06.17</div>
+          <div class="news-body">
+            <h3>Webサイトのデザインをリニューアルしました</h3>
+            <p>企業サイト風のデザインに変更し、お悩み、サービス、導入・支援実績を見やすく整理しました。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2026.06.17</div>
+          <div class="news-body">
+            <h3>導入・支援実績を更新しました</h3>
+            <p>川島第四町内会ホームページ作成支援、尊建設様 Google Workspace活用支援、株式会社ナチュラルマインドデンキ様 PC導入支援を掲載しました。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2026.06.17</div>
+          <div class="news-body">
+            <h3>お問い合わせ導線を整備しました</h3>
+            <p>Googleフォーム、メール、LINEから相談できるようにしました。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
