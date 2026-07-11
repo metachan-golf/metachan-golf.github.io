@@ -3,383 +3,976 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="株式会社尊建設の公式Webサイト。神奈川県大和市を拠点に、大工工事を通じて地域の暮らしと未来を支えます。">
-  <meta name="theme-color" content="#0d4b3f">
-  <meta property="og:title" content="株式会社尊建設｜地域の明日をつくる">
-  <meta property="og:description" content="神奈川県大和市を拠点に、大工工事を通じて地域の暮らしと未来を支える建設会社です。">
+  <title>めたちゃんDX相談所｜横浜・保土ヶ谷の小規模企業・自治会向けDX支援</title>
+  <meta name="description" content="横浜・保土ヶ谷・上星川・川島町周辺の小規模企業、自治会、町内会向けに、ホームページ作成、PC導入、Google Workspace活用、業務効率化、IT相談を支援する めたちゃんDX相談所 です。">
+  <meta name="keywords" content="横浜DX, 保土ヶ谷DX, 上星川DX, 西谷DX, 川島町, 自治会ホームページ, 町内会ホームページ, Google Workspace支援, 小規模企業DX, PC導入支援, IT相談, めたちゃんDX相談所">
+  <meta name="author" content="めたちゃんDX相談所">
+  <meta property="og:title" content="めたちゃんDX相談所｜横浜・保土ヶ谷のDX支援">
+  <meta property="og:description" content="自治会・町内会・小規模企業のITまわりを、身近な相談相手としてサポートします。">
   <meta property="og:type" content="website">
-  <meta name="date" content="2026-07-11">
-  <title>株式会社尊建設｜神奈川県大和市の大工工事</title>
-  <link rel="canonical" href="https://takeru-kensetsu.com/">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/style.css">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "GeneralContractor",
-  "name": "株式会社 尊建設",
-  "url": "https://takeru-kensetsu.com/",
-  "logo": "https://takeru-kensetsu.com/assets/images/logo.png",
-  "telephone": "+81-46-212-2788",
-  "dateModified": "2026-07-11",
-  "address": {
-    "@type": "PostalAddress",
-    "postalCode": "242-0022",
-    "addressRegion": "神奈川県",
-    "addressLocality": "大和市",
-    "streetAddress": "柳橋1-10-7",
-    "addressCountry": "JP"
-  },
-  "founder": {
-    "@type": "Person",
-    "name": "竹田 実"
-  }
-}
-  </script>
+  <meta property="og:url" content="https://metachan.jp/">
+  <meta property="og:image" content="https://metachan.jp/ogp.png">
+  <link rel="canonical" href="https://metachan.jp/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #005bac;
+      --blue-2: #0072ce;
+      --sky: #eaf5ff;
+      --deep: #071f41;
+      --ink: #1b2638;
+      --muted: #65758b;
+      --line: #dfe8f2;
+      --light: #f6f9fc;
+      --accent: #00a6e8;
+      --shadow: 0 18px 48px rgba(15, 47, 83, .12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.75;
+      letter-spacing: .015em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-topbar {
+      background: var(--deep);
+      color: rgba(255,255,255,.82);
+      font-size: .82rem;
+      padding: 8px 0;
+    }
+
+    .navbar {
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 8px 28px rgba(0,0,0,.04);
+    }
+
+    .navbar-brand {
+      color: var(--deep) !important;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      display: inline-grid;
+      place-items: center;
+      margin-right: 12px;
+      color: #fff;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--blue), var(--accent));
+      border-radius: 4px 18px 4px 18px;
+      box-shadow: 0 12px 28px rgba(0,91,172,.26);
+    }
+
+    .nav-link {
+      color: #26384e !important;
+      font-size: .92rem;
+      font-weight: 700;
+      padding-left: .8rem !important;
+      padding-right: .8rem !important;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: .8rem;
+      right: .8rem;
+      bottom: 0;
+      height: 3px;
+      background: var(--blue-2);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .18s ease;
+    }
+
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 12px 22px;
+      background: var(--blue);
+      color: #fff;
+      border: 1px solid var(--blue);
+      border-radius: 0;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(0,91,172,.22);
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .btn-main:hover {
+      color: #fff;
+      background: #004685;
+      transform: translateY(-1px);
+    }
+
+    .btn-sub {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 12px 22px;
+      color: var(--blue);
+      background: #fff;
+      border: 1px solid var(--blue);
+      border-radius: 0;
+      font-weight: 900;
+    }
+
+    .btn-sub:hover { color: #fff; background: var(--blue); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 124px 0 66px;
+      background:
+        linear-gradient(90deg, rgba(246,249,252,.95) 0%, rgba(246,249,252,.95) 54%, rgba(0,91,172,.08) 54%, rgba(0,91,172,.08) 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -7vw;
+      top: 0;
+      width: 58vw;
+      height: 100%;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%);
+      transform: skewX(-13deg);
+      transform-origin: top;
+      box-shadow: -30px 0 90px rgba(0,91,172,.18);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,91,172,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,91,172,.06) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: linear-gradient(to right, black 0%, transparent 76%);
+      pointer-events: none;
+    }
+
+    .hero .container { position: relative; z-index: 1; }
+
+    .hero-kicker {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: 900;
+      letter-spacing: .14em;
+      font-size: .85rem;
+      border-left: 5px solid var(--blue);
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.2vw, 5rem);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -.045em;
+      color: var(--deep);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span { color: var(--blue); }
+
+    .hero-lead {
+      max-width: 640px;
+      color: #40516a;
+      font-size: clamp(1.02rem, 1.7vw, 1.18rem);
+      margin-bottom: 28px;
+    }
+
+    .hero-panel {
+      position: relative;
+      margin-left: auto;
+      width: min(100%, 430px);
+      color: #fff;
+      background: rgba(5, 44, 91, .88);
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 32px;
+      box-shadow: 0 30px 70px rgba(0, 24, 64, .28);
+    }
+
+    .hero-panel-title {
+      font-size: 1.55rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 18px;
+    }
+
+    .hero-topic {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-top: 1px solid rgba(255,255,255,.18);
+    }
+
+    .hero-topic b {
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 34px;
+      height: 34px;
+      background: #fff;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .ticker-band {
+      background: var(--deep);
+      color: #fff;
+      padding: 18px 0;
+    }
+
+    .ticker-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .ticker-item span {
+      color: #8bd8ff;
+      font-size: .82rem;
+      letter-spacing: .08em;
+    }
+
+    .section { padding: 86px 0; }
+    .section-light { background: var(--light); }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 36px;
+      align-items: start;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      color: var(--blue);
+      font-weight: 900;
+      letter-spacing: .12em;
+      font-size: .82rem;
+      padding-top: 8px;
+      border-top: 4px solid var(--blue);
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.3vw, 3rem);
+      line-height: 1.25;
+      letter-spacing: -.03em;
+      font-weight: 900;
+      color: var(--deep);
+      margin: 0 0 14px;
+    }
+
+    .section-lead { color: var(--muted); max-width: 840px; margin: 0; }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .problem-card {
+      min-height: 230px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .problem-card:hover { background: var(--sky); transform: translateY(-2px); }
+
+    .problem-card .number {
+      color: var(--blue);
+      font-size: .86rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      margin-bottom: 20px;
+    }
+
+    .problem-card h3 {
+      font-size: 1.18rem;
+      font-weight: 900;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .problem-card p { color: var(--muted); margin: 0; }
+
+    .service-block {
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 220px 1fr 190px;
+      align-items: stretch;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-row:last-child { border-bottom: 0; }
+
+    .service-cat {
+      background: var(--deep);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 28px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+
+    .service-body { padding: 28px; }
+
+    .service-body h3 { font-size: 1.3rem; font-weight: 900; color: var(--deep); margin-bottom: 12px; }
+    .service-body p { color: var(--muted); margin-bottom: 14px; }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .tag-list li { background: var(--sky); color: var(--blue); font-weight: 800; font-size: .82rem; padding: 6px 10px; }
+
+    .service-link {
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-weight: 900;
+      border-left: 1px solid var(--line);
+      padding: 20px;
+    }
+    .service-link:hover { background: var(--blue); color: #fff; }
+
+    .area-band {
+      background: linear-gradient(90deg, var(--deep), #083f7a);
+      color: #fff;
+      padding: 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .area-band::after {
+      content: "AREA";
+      position: absolute;
+      right: -8px;
+      bottom: -44px;
+      color: rgba(255,255,255,.08);
+      font-size: 10rem;
+      font-weight: 900;
+      letter-spacing: -.06em;
+    }
+
+    .area-band h2 { position: relative; z-index: 1; font-weight: 900; margin-bottom: 16px; }
+    .area-band p { position: relative; z-index: 1; color: rgba(255,255,255,.78); max-width: 850px; }
+
+    .area-tags { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .area-tags span { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); padding: 8px 14px; font-weight: 800; }
+
+    .case-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .case-card {
+      display: grid;
+      grid-template-columns: 150px 1fr 170px;
+      gap: 24px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 26px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.05);
+    }
+
+    .case-badge {
+      color: var(--blue);
+      font-weight: 900;
+      font-size: .8rem;
+      letter-spacing: .08em;
+      border-left: 4px solid var(--blue);
+      padding-left: 12px;
+    }
+
+    .case-card h3 { font-size: 1.22rem; font-weight: 900; margin-bottom: 8px; color: var(--deep); }
+    .case-card p { color: var(--muted); margin: 0; }
+
+    .text-link { color: var(--blue); font-weight: 900; }
+    .text-link:hover { color: #003f7a; text-decoration: underline; }
+
+    .news-list {
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 24px;
+      padding: 22px 26px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .news-item:last-child { border-bottom: 0; }
+
+    .news-date {
+      color: var(--blue);
+      font-weight: 900;
+      font-size: .92rem;
+      letter-spacing: .04em;
+    }
+
+    .news-body h3 {
+      margin: 0 0 6px;
+      color: var(--deep);
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    .news-body p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .profile-wrap {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-aside {
+      color: #fff;
+      background: var(--deep);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-aside::after {
+      content: "DX";
+      position: absolute;
+      right: -20px;
+      bottom: -52px;
+      color: rgba(255,255,255,.08);
+      font-size: 8rem;
+      font-weight: 900;
+    }
+
+    .profile-aside h3 { font-weight: 900; margin-top: 16px; }
+    .profile-aside p { color: rgba(255,255,255,.75); }
+
+    .profile-main { padding: 38px; }
+    .profile-main p { color: var(--muted); margin-bottom: 1rem; }
+
+    .license-box {
+      border-left: 5px solid var(--blue);
+      background: var(--sky);
+      padding: 18px 20px;
+      color: #33475e;
+      font-weight: 700;
+    }
+
+    .personal-note {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 24px 26px;
+      background: linear-gradient(90deg, #ffffff 0%, #f3f8ff 100%);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 34px rgba(0, 63, 123, .08);
+    }
+
+    .personal-note-label {
+      color: var(--blue);
+      font-weight: 900;
+      font-size: .78rem;
+      letter-spacing: .12em;
+      margin-bottom: 8px;
+    }
+
+    .personal-note h3 {
+      color: var(--deep);
+      font-size: 1.15rem;
+      font-weight: 900;
+      margin: 0 0 8px;
+    }
+
+    .personal-note p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .personal-note .small-note {
+      display: block;
+      margin-top: 8px;
+      color: #7890a8;
+      font-size: .82rem;
+    }
+
+    .flow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .flow-card { background: #fff; padding: 30px; }
+    .flow-number { color: var(--blue); font-size: 2.3rem; font-weight: 900; letter-spacing: -.04em; margin-bottom: 12px; }
+    .flow-card h3 { font-weight: 900; color: var(--deep); margin-bottom: 12px; }
+    .flow-card p { color: var(--muted); margin: 0; }
+
+    .contact-section {
+      color: #fff;
+      background: linear-gradient(90deg, #082b55 0%, #005bac 100%);
+      padding: 84px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: "CONTACT";
+      position: absolute;
+      right: 3vw;
+      top: -34px;
+      color: rgba(255,255,255,.08);
+      font-size: 9rem;
+      font-weight: 900;
+      letter-spacing: -.05em;
+    }
+
+    .contact-card {
+      height: 100%;
+      background: #fff;
+      color: var(--ink);
+      padding: 28px;
+      border-top: 5px solid var(--accent);
+      box-shadow: 0 16px 40px rgba(0,0,0,.18);
+    }
+
+    .contact-card h3 { color: var(--deep); font-weight: 900; }
+    .contact-card p { color: var(--muted); }
+
+    .footer {
+      color: rgba(255,255,255,.75);
+      background: #06172d;
+      padding: 36px 0;
+      font-size: .9rem;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1030;
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 14px 32px rgba(0,91,172,.28);
+    }
+    .back-to-top:hover { color: #fff; background: #004685; }
+
+    @media (max-width: 991.98px) {
+      .site-topbar { display: none; }
+      .navbar { top: 0; }
+      .navbar-collapse { padding: 16px 0; border-top: 1px solid var(--line); margin-top: 12px; }
+      .nav-link::after { display: none; }
+      .hero { padding: 96px 0 56px; background: var(--light); }
+      .hero::before { right: -30vw; width: 72vw; opacity: .16; }
+      .hero-panel { margin: 32px 0 0; width: 100%; }
+      .section { padding: 64px 0; }
+      .section-head { grid-template-columns: 1fr; gap: 14px; }
+      .problem-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-row { grid-template-columns: 1fr; }
+      .service-cat { padding: 18px 24px; }
+      .service-link { border-left: 0; border-top: 1px solid var(--line); justify-content: start; place-items: stretch; }
+      .case-card { grid-template-columns: 1fr; gap: 12px; }
+      .news-item { grid-template-columns: 1fr; gap: 6px; padding: 20px; }
+      .profile-wrap { grid-template-columns: 1fr; }
+      .personal-note { grid-template-columns: 1fr; align-items: stretch; }
+      .personal-note .btn-sub { justify-content: center; }
+      .flow-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 575.98px) {
+      .container { padding-left: 18px; padding-right: 18px; }
+      .navbar-brand { font-size: .98rem; }
+      .brand-mark { width: 36px; height: 36px; margin-right: 8px; }
+      .hero h1 { font-size: clamp(2rem, 11vw, 3rem); }
+      .hero h1 br { display: none; }
+      .d-flex.flex-sm-row .btn-main,
+      .d-flex.flex-sm-row .btn-sub { width: 100%; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .area-band { padding: 32px 24px; }
+      .profile-main, .profile-aside { padding: 28px 22px; }
+      .contact-section { padding: 62px 0; }
+      .back-to-top { right: 14px; bottom: 14px; width: 46px; height: 46px; }
+      .footer { padding-bottom: 78px; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="#top" aria-label="株式会社尊建設 トップへ">
-      <img class="brand-logo" src="assets/images/logo.png" alt="株式会社尊建設 ロゴ">
-      <span class="brand-text">
-        <strong>株式会社 尊建設</strong>
-        <small>TAKERU CONSTRUCTION</small>
-      </span>
-    </a>
+  <div class="site-topbar">
+    <div class="container d-flex justify-content-between gap-3">
+      <div>横浜・保土ヶ谷・上星川・西谷・川島町周辺の地域密着DX支援</div>
+      <div>初回相談無料｜Web会議・電話相談対応</div>
+    </div>
+  </div>
 
-    <button class="menu-button" id="menuButton" type="button"
-      aria-label="メニューを開く" aria-controls="globalNav" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#top" aria-label="めたちゃんDX相談所 ホーム">
+        <span class="brand-mark">め</span>
+        <span>めたちゃんDX相談所</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションを開く">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#problems">お悩みから探す</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">サービス</a></li>
+          <li class="nav-item"><a class="nav-link" href="#area">対応エリア</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cases">導入事例</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profile">プロフィール</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">更新履歴</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn-main py-2 px-3" href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="global-nav" id="globalNav" aria-label="メインメニュー">
-      <a href="#news"><span>WHAT&#39;S NEW</span>更新情報</a>
-      <a href="#business"><span>BUSINESS</span>事業紹介</a>
-      <a href="#works"><span>WORKS</span>施工実績</a>
-      <a href="#company"><span>COMPANY</span>会社案内</a>
-      <a href="#recruit"><span>RECRUIT</span>採用情報</a>
-      <a class="nav-contact" href="#contact">お問い合わせ</a>
-    </nav>
+  <header id="top" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="hero-kicker">METACHAN DX SUPPORT</div>
+          <h1>地域のIT課題を<br><span>わかりやすく、実装まで。</span></h1>
+          <p class="hero-lead">
+            自治会・町内会・小規模事業者のための、身近なDX相談窓口です。ホームページ作成、Google Workspace活用、PCセットアップ、情報共有の見直しまで、現場に合わせて伴走します。
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <a class="btn-main" href="#contact">無料相談する →</a>
+            <a class="btn-sub" href="#services">サービスを見る</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-panel">
+            <div class="hero-panel-title">“専門家に頼むほどではないかも”という相談こそ、お任せください。</div>
+            <div class="hero-topic"><b>01</b><div><strong>Web</strong><br><span class="text-white-50">ホームページ作成・公開後の更新支援</span></div></div>
+            <div class="hero-topic"><b>02</b><div><strong>Workspace</strong><br><span class="text-white-50">ドメイン取得・Google Workspace環境設定</span></div></div>
+            <div class="hero-topic"><b>03</b><div><strong>IT Support</strong><br><span class="text-white-50">PC設定・メール移行・相談役としての伴走</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-tree" aria-hidden="true"></div>
+  <div class="ticker-band">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-4"><div class="ticker-item"><span>AREA</span>横浜・保土ヶ谷周辺</div></div>
+        <div class="col-md-4"><div class="ticker-item"><span>STYLE</span>小さく始めるDX支援</div></div>
+        <div class="col-md-4"><div class="ticker-item"><span>CONTACT</span>Googleフォーム・メール・LINE対応</div></div>
+      </div>
+    </div>
+  </div>
 
-      <div class="hero-copy">
-        <p class="hero-en">
-          <span>BUILD</span>
-          <span>WITH</span>
-          <span>TRUST.</span>
-        </p>
-        <h1 id="heroTitle">想いを、かたちに。<br>大工の技で地域を支える。</h1>
-        <p class="hero-sub">
-          神奈川県大和市を拠点に、大工工事を通じて、<br>
-          安心して長く暮らせる場所づくりに取り組みます。
-        </p>
-        <div class="hero-logo-badge">
-          <img src="assets/images/logo.png" alt="株式会社尊建設 ロゴ">
+  <section id="problems" class="section section-light">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">ISSUES</div>
+        <div>
+          <h2 class="section-title">お悩みから探す</h2>
+          <p class="section-lead">ITやDXは、何から始めればよいかわかりにくいものです。まずは今困っていることを起点に、必要な対応を一緒に整理します。</p>
+        </div>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="number">ISSUE 01</div>
+          <h3>ホームページを作りたい</h3>
+          <p>自治会・町内会・小規模事業者向けに、見やすく更新しやすいWebサイトを作成します。</p>
+        </div>
+        <div class="problem-card">
+          <div class="number">ISSUE 02</div>
+          <h3>Google Workspaceを使いたい</h3>
+          <p>ドメイン取得、メール環境、共有ドライブ、フォーム活用などを現場に合わせて設定します。</p>
+        </div>
+        <div class="problem-card">
+          <div class="number">ISSUE 03</div>
+          <h3>PCやメール設定が不安</h3>
+          <p>PC購入後の初期設定、Outlook移行、プリンタ接続など、業務開始までを支援します。</p>
+        </div>
+        <div class="problem-card">
+          <div class="number">ISSUE 04</div>
+          <h3>ITに詳しい人がいない</h3>
+          <p>自社のITをお願いしている業者様への確認や、何を頼むべきかの整理など、身近な相談役として伴走します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">SERVICES</div>
+        <div>
+          <h2 class="section-title">サービス一覧</h2>
+          <p class="section-lead">企業サイトのサービス一覧のように、できることを分野別に整理しました。必要なものだけを小さく始められます。</p>
+        </div>
+      </div>
+      <div class="service-block">
+        <div class="service-row">
+          <div class="service-cat">Web / Public Relations</div>
+          <div class="service-body">
+            <h3>ホームページ作成・運用支援</h3>
+            <p>GitHub Pagesなどを活用し、低コストで見やすいホームページを作成します。自治会・町内会のお知らせ発信にも対応します。</p>
+            <ul class="tag-list"><li>自治会サイト</li><li>町内会サイト</li><li>小規模事業者サイト</li><li>SEO設計</li></ul>
+          </div>
+          <a class="service-link" href="#cases">実績を見る →</a>
+        </div>
+        <div class="service-row">
+          <div class="service-cat">Google Workspace</div>
+          <div class="service-body">
+            <h3>ドメイン取得・Google Workspace活用支援</h3>
+            <p>独自ドメインの取得から、メール、共有ドライブ、Googleフォーム、スプレッドシート活用まで、使える状態に整えます。</p>
+            <ul class="tag-list"><li>ドメイン取得</li><li>メール設定</li><li>共有ドライブ</li><li>Googleフォーム</li></ul>
+          </div>
+          <a class="service-link" href="#contact">相談する →</a>
+        </div>
+        <div class="service-row">
+          <div class="service-cat">PC / IT Support</div>
+          <div class="service-body">
+            <h3>PC・OA機器導入サポート</h3>
+            <p>PC選定、購入後の初期設定、メール移行、データ移行、プリンタ接続など、日常業務の土台を整えます。</p>
+            <ul class="tag-list"><li>PCセットアップ</li><li>Outlook移行</li><li>周辺機器設定</li><li>IT相談</li></ul>
+          </div>
+          <a class="service-link" href="#contact">問い合わせ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area" class="section section-light">
+    <div class="container">
+      <div class="area-band">
+        <h2>横浜・上星川・西谷・川島町周辺のご相談に対応</h2>
+        <p>めたちゃんDX相談所は、横浜市内、とくに上星川・西谷・川島町周辺で、DX、IT、ネットワーク、Wi-Fi、セキュリティ、業務効率化の身近な相談先としてご利用いただけることを目指しています。</p>
+        <div class="area-tags">
+          <span>横浜</span><span>保土ヶ谷</span><span>上星川</span><span>西谷</span><span>川島町</span><span>オンライン相談</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">CASE STUDY</div>
+        <div>
+          <h2 class="section-title">導入・支援実績</h2>
+          <p class="section-lead">実際の支援内容を、企業サイトの導入事例風に横並びではなくリスト形式で見せる構成に変更しました。</p>
+        </div>
+      </div>
+      <div class="case-list">
+        <div class="case-card">
+          <div class="case-badge">自治会・町内会DX</div>
           <div>
-            <small>OFFICIAL LOGO</small>
-            <strong>株式会社 尊建設</strong>
+            <h3>川島第四町内会ホームページ作成支援</h3>
+            <p>町内会の活動内容、行事予定、防災・防犯、加入案内などを掲載する公式ホームページの作成を支援。地域住民に必要な情報へアクセスしやすい構成に整理しました。</p>
+          </div>
+          <a class="text-link" href="https://kawashima-d4-community.github.io/web/" target="_blank" rel="noopener noreferrer">ホームページを見る →</a>
+        </div>
+        <div class="case-card">
+          <div class="case-badge">Web / Google Workspace</div>
+          <div>
+            <h3>尊建設様 公式ホームページ作成・Google Workspace活用支援</h3>
+            <p>公式ホームページ作成、ドメイン取得、Google Workspace環境設定、PCセットアップを支援。Webでの情報発信と、業務で利用できるメール・クラウド環境の整備をサポートしました。</p>
+          </div>
+          <a class="text-link" href="https://takeru-kensetsu.com/" target="_blank" rel="noopener noreferrer">公式ホームページを見る →</a>
+        </div>
+        <div class="case-card">
+          <div class="case-badge">PC導入支援</div>
+          <div>
+            <h3>株式会社ナチュラルマインドデンキ 様のPC導入支援</h3>
+            <p>PCやOA機器の購入サポートを実施。実際のPC購入からセットアップ、利用していたOutlookデータの移行まで支援しました。</p>
+          </div>
+          <a class="text-link" href="#services">支援内容を見る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profile" class="section section-light">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">PROFILE</div>
+        <div>
+          <h2 class="section-title">相談しやすい、地域のITパートナー</h2>
+          <p class="section-lead">技術に強いだけではなく、相手に合わせてわかりやすく説明することを大切にしています。</p>
+        </div>
+      </div>
+      <div class="profile-wrap">
+        <div class="profile-aside">
+          <div class="brand-mark" style="width:64px;height:64px;font-size:1.6rem;">め</div>
+          <h3>めたちゃんDX相談所</h3>
+          <p>横浜・保土ヶ谷・上星川・川島町周辺を中心に、自治会・町内会・小規模企業のIT活用を支援します。</p>
+        </div>
+        <div class="profile-main">
+          <h3 class="fw-bold mb-3">代表プロフィール</h3>
+          <p>自治会・町内会・小規模事業者の皆さまにとって、ITやDXは「何から始めればよいかわからない」「誰に相談すればよいかわからない」と感じやすい分野です。</p>
+          <p>めたちゃんDX相談所では、ホームページ作成、PCやメールの設定、情報共有の見直し、Googleフォームの活用、業務のちょっとした効率化など、身近なITのお困りごとを、専門用語をできるだけ使わずにわかりやすく整理し、現場に合った形で支援しています。</p>
+          <p>代表は、20年以上にわたり企業向けITインフラの現場で、ネットワーク、セキュリティ、ボイス、データセンター、クラウド連携、プロジェクトマネジメントなど、幅広い分野に携わってきました。</p>
+          <p>こうした専門的な経験や知識を、自治会・町内会・小規模事業者の皆さまにとって、身近で相談しやすい形に変えてお届けすることを大切にしています。</p>
+          <p>「こんなことを相談してもよいのかな？」という段階からでも大丈夫です。現場の状況に寄り添いながら、一緒に整理し、無理のないDX・IT活用を支援します。</p>
+          <div class="license-box">
+            <strong>主な保有資格：</strong><br>
+            CCIE Enterprise Infrastructure、CCNP Enterprise / Collaboration / Security / Data Center、PMP、情報処理安全確保支援士、テクニカルエンジニア（ネットワーク）、基本情報技術者 など
           </div>
         </div>
       </div>
-
-      <div class="hero-visual" aria-label="尊建設の仕事を表すイメージ">
-        <figure class="visual-card visual-main">
-          <img src="assets/images/hero-worker.svg" alt="現場で働く作業員を表したイラスト">
-        </figure>
-        <figure class="visual-card visual-sub visual-sub-a">
-          <img src="assets/images/hero-building.svg" alt="建築現場を表したイラスト">
-        </figure>
-        <figure class="visual-card visual-sub visual-sub-b">
-          <img src="assets/images/hero-community.svg" alt="地域の街並みを表したイラスト">
-        </figure>
-        <div class="hero-label">TAKERU<br>CONSTRUCTION</div>
+      <div class="personal-note">
+        <div>
+          <div class="personal-note-label">PERSONAL NOTE</div>
+          <h3>代表の日常・学びの記録</h3>
+          <p>このサイトでは、仕事・地域DXの支援情報を中心に掲載しています。代表の人柄や、ゴルフ・学び・技術への取り組みはBlogでも発信しています。</p>
+          <span class="small-note"></span>
+        </div>
+        <a class="btn-sub" href="https://ameblo.jp/metachan-golf/" target="_blank" rel="noopener noreferrer">Blogを見る</a>
       </div>
+    </div>
+  </section>
 
-      <a class="scroll-guide" href="#news">
-        <span>SCROLL</span>
-        <i aria-hidden="true"></i>
-      </a>
-    </section>
-
-    <section class="news section-wrap" id="news">
-      <div class="section-side">
-        <p class="section-index">WHAT&#39;S NEW</p>
-        <h2>更新情報</h2>
+  <section id="flow" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">FLOW</div>
+        <div>
+          <h2 class="section-title">ご相談の流れ</h2>
+          <p class="section-lead">まずは無料相談から。内容を伺ったうえで、必要な支援範囲を一緒に整理します。</p>
+        </div>
       </div>
+      <div class="flow-grid">
+        <div class="flow-card"><div class="flow-number">01</div><h3>無料相談</h3><p>Web会議や電話で、現在のお困りごとを確認します。休日の日中帯や平日18時以降でも対応可能です。</p></div>
+        <div class="flow-card"><div class="flow-number">02</div><h3>進め方の整理</h3><p>必要な作業、費用感、スケジュールをわかりやすく整理し、無理のない進め方をご提案します。</p></div>
+        <div class="flow-card"><div class="flow-number">03</div><h3>導入・運用支援</h3><p>ホームページ作成、PC設定、業務効率化など、現場で使える形になるまで伴走します。</p></div>
+      </div>
+    </div>
+  </section>
 
+  <section id="news" class="section section-light">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">NEWS</div>
+        <div>
+          <h2 class="section-title">更新履歴</h2>
+          <p class="section-lead">めたちゃんDX相談所からのお知らせや、Webサイトの更新内容を掲載します。</p>
+        </div>
+      </div>
       <div class="news-list">
-        <article class="news-item">
-          <time datetime="2026-07-11">2026.07.11</time>
-          <span class="news-category">Web更新</span>
-          <a href="#message">代表あいさつを掲載しました。</a>
-        </article>
-        <article class="news-item">
-          <time datetime="2026-07-11">2026.07.11</time>
-          <span class="news-category">Web更新</span>
-          <a href="#profile">会社情報・建設業許可情報を更新しました。</a>
-        </article>
-        <article class="news-item">
-          <time datetime="2026-07-09">2026.07.09</time>
-          <span class="news-category">許可情報</span>
-          <a href="#profile">建設業許可を取得しました（大工工事業）。</a>
-        </article>
-        <article class="news-item">
-          <time datetime="2026-04-01">2026.04.01</time>
-          <span class="news-category">お知らせ</span>
-          <a href="#contact">株式会社尊建設の公式Webサイトを公開しました。</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="business" id="business">
-      <div class="section-heading section-heading-light">
-        <p class="number">#01</p>
-        <div>
-          <p class="section-index">BUSINESS</p>
-          <h2>事業紹介</h2>
-          <p class="section-lead">
-            大工工事を中心に、一つひとつの現場へ誠実に向き合い、<br>
-            分かりやすく丁寧な仕事を大切にします。
-          </p>
-        </div>
-      </div>
-
-      <div class="business-cards">
-        <article class="business-card">
-          <div class="business-image">
-            <img src="assets/images/business-building.svg" alt="">
-          </div>
-          <div class="business-body">
-            <p class="card-number">BUSINESS #01</p>
-            <h3>大工工事</h3>
-            <p>木材の加工・組立てなど、建物を形づくる大工工事に丁寧に取り組みます。</p>
-            <span class="text-link">VIEW MORE <i>→</i></span>
-          </div>
-        </article>
-
-        <article class="business-card">
-          <div class="business-image">
-            <img src="assets/images/business-renovation.svg" alt="">
-          </div>
-          <div class="business-body">
-            <p class="card-number">BUSINESS #02</p>
-            <h3>木工事・造作工事</h3>
-            <p>建具枠や下地、室内の造作など、用途や納まりに合わせた木工事を行います。</p>
-            <span class="text-link">VIEW MORE <i>→</i></span>
-          </div>
-        </article>
-
-        <article class="business-card">
-          <div class="business-image">
-            <img src="assets/images/business-exterior.svg" alt="">
-          </div>
-          <div class="business-body">
-            <p class="card-number">BUSINESS #03</p>
-            <h3>改修に伴う大工工事</h3>
-            <p>建物の改修やリフォームに伴う大工工事について、内容を確認のうえご相談を承ります。</p>
-            <span class="text-link">VIEW MORE <i>→</i></span>
-          </div>
-        </article>
-      </div>
-
-      <p class="provisional-note">
-        建設業許可：神奈川県知事許可（般-8）第94620号／建設業の種類：大工工事業
-      </p>
-    </section>
-
-    <section class="works" id="works">
-      <div class="section-heading">
-        <p class="number">#02</p>
-        <div>
-          <p class="section-index">WORKS</p>
-          <h2>施工実績</h2>
-          <p class="section-lead">
-            完成した建物だけでなく、そこに至るまでの<br>
-            丁寧な仕事もお伝えします。
-          </p>
-        </div>
-        <a class="round-link" href="#contact" aria-label="施工実績一覧へ">→</a>
-      </div>
-
-      <div class="works-grid">
-        <article class="work-card work-large">
-          <div class="work-image">
-            <img src="assets/images/work-house.svg" alt="住宅施工事例のイメージ">
-          </div>
-          <p class="work-type">大工工事</p>
-          <h3>木造建築に関する大工工事</h3>
-        </article>
-        <article class="work-card">
-          <div class="work-image">
-            <img src="assets/images/work-renovation.svg" alt="改修工事事例のイメージ">
-          </div>
-          <p class="work-type">造作工事</p>
-          <h3>室内の木工・造作工事</h3>
-        </article>
-        <article class="work-card">
-          <div class="work-image">
-            <img src="assets/images/work-exterior.svg" alt="外構工事事例のイメージ">
-          </div>
-          <p class="work-type">改修工事</p>
-          <h3>改修に伴う大工工事</h3>
-        </article>
-      </div>
-
-      <p class="provisional-note dark-note">
-        ※現在はイメージ画像です。公開可能な施工写真・地域・工期・工事概要へ差し替えてください。
-      </p>
-    </section>
-
-    <section class="company" id="company">
-      <div class="company-photo" aria-hidden="true">
-        <div class="company-landscape">
-          <span class="mountain mountain-a"></span>
-          <span class="mountain mountain-b"></span>
-          <span class="mountain mountain-c"></span>
-          <span class="town"></span>
-        </div>
-      </div>
-
-      <div class="company-content">
-        <div class="section-heading section-heading-light">
-          <p class="number">#03</p>
-          <div>
-            <p class="section-index">COMPANY</p>
-            <h2>会社案内</h2>
+        <div class="news-item">
+          <div class="news-date">2026.06.17</div>
+          <div class="news-body">
+            <h3>Webサイトのデザインをリニューアルしました</h3>
+            <p>企業サイト風のデザインに変更し、お悩み、サービス、導入・支援実績を見やすく整理しました。</p>
           </div>
         </div>
-
-        <p class="company-message">
-          地域に根ざし、<br>
-          誠実な仕事で信頼を積み重ねる。
-        </p>
-        <p class="company-text">
-          株式会社尊建設は、神奈川県大和市を拠点に、お客様との対話を大切にしながら、
-          安全・品質・分かりやすさを基本として、大工工事に取り組んでいます。
-        </p>
-
-        <div class="permit-badge">
-          <small>CONSTRUCTION LICENSE</small>
-          <strong>神奈川県知事許可（般-8）第94620号</strong>
-          <span>大工工事業／有効期間：令和8年7月9日～令和13年7月8日</span>
+        <div class="news-item">
+          <div class="news-date">2026.06.17</div>
+          <div class="news-body">
+            <h3>導入・支援実績を更新しました</h3>
+            <p>川島第四町内会ホームページ作成支援、尊建設様 Google Workspace活用支援、株式会社ナチュラルマインドデンキ様 PC導入支援を掲載しました。</p>
+          </div>
         </div>
-
-        <div class="company-links">
-          <a href="#message">代表あいさつ <span>→</span></a>
-          <a href="#profile">会社概要 <span>→</span></a>
-          <a href="#contact">安全・品質への取組み <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="message" id="message">
-      <div class="message-inner">
-        <div class="message-photo">
-          <img src="assets/images/president-takeda-minoru.png" alt="株式会社尊建設 代表取締役 竹田実">
-        </div>
-        <div class="message-content">
-          <p class="section-index">MESSAGE</p>
-          <h2>代表あいさつ</h2>
-          <p class="message-role">代表取締役　竹田 実 <span>Takeda Minoru</span></p>
-          <div class="message-body">
-            <p>
-              株式会社尊建設は、地域に根差した大工工事を通じて、
-              一つひとつの現場に誠実に向き合うことを大切にしています。
-            </p>
-            <p>
-              建物は、そこで暮らす人や働く人の毎日を支える大切な場所です。
-              私たちは大工としての技術と責任を持ち、
-              安全で丁寧な施工を積み重ねることで、地域の安心と信頼に応えてまいります。
-            </p>
-            <p>
-              また、大工工事を通じて社会に貢献することを使命とし、
-              お客様にとって分かりやすく、相談しやすい会社であり続けたいと考えています。
-              これからも地域の皆さまに必要とされる存在を目指し、
-              真摯に仕事へ取り組んでまいります。
-            </p>
+        <div class="news-item">
+          <div class="news-date">2026.06.17</div>
+          <div class="news-body">
+            <h3>お問い合わせ導線を整備しました</h3>
+            <p>Googleフォーム、メール、LINEから相談できるようにしました。</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="profile section-wrap" id="profile">
-      <div class="section-side">
-        <p class="section-index">PROFILE</p>
-        <h2>会社概要</h2>
-      </div>
-      <dl class="profile-list">
-        <div><dt>会社名</dt><dd>株式会社 尊建設</dd></div>
-        <div><dt>代表取締役</dt><dd>竹田 実 <span class="profile-en">Takeda Minoru</span></dd></div>
-        <div><dt>所在地</dt><dd>〒242-0022 神奈川県大和市柳橋1-10-7</dd></div>
-        <div><dt>建設業許可</dt><dd>神奈川県知事許可（般-8）第94620号</dd></div>
-        <div><dt>建設業の種類</dt><dd>大工工事業</dd></div>
-        <div><dt>許可有効期間</dt><dd>令和8年7月9日～令和13年7月8日</dd></div>
-        <div><dt>TEL／FAX</dt><dd><a href="tel:0462122788">046-212-2788</a></dd></div>
-        <div><dt>Web</dt><dd><a href="https://takeru-kensetsu.com/">https://takeru-kensetsu.com</a></dd></div>
-      </dl>
-    </section>
-
-    <section class="recruit" id="recruit">
-      <div class="recruit-copy">
-        <p class="number">#04</p>
-        <p class="section-index">RECRUIT</p>
-        <h2>一緒に、<br>地域の未来をつくる。</h2>
-        <p>
-          採用を行う場合に、募集職種や仕事内容、会社の雰囲気を紹介するスペースです。
-        </p>
-        <a class="outline-link" href="#contact">採用情報を見る <span>→</span></a>
-      </div>
-      <div class="recruit-visual">
-        <img src="assets/images/recruit.svg" alt="建設現場で働く仲間を表したイラスト">
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div>
-        <p class="section-index">CONTACT</p>
-        <h2>工事のご相談・お問い合わせ</h2>
-        <p>大工工事に関するご相談・お見積りについて、お電話でお問い合わせください。</p>
-      </div>
-      <div class="contact-actions contact-actions-single">
-        <a class="contact-item" href="tel:0462122788">
-          <small>TEL / FAX</small>
-          <strong>046-212-2788</strong>
-          <span>電話をかける</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-top">
-      <a class="brand footer-brand" href="#top">
-        <img class="brand-logo" src="assets/images/logo.png" alt="株式会社尊建設 ロゴ">
-        <span class="brand-text">
-          <strong>株式会社 尊建設</strong>
-          <small>TAKERU CONSTRUCTION</small>
-        </span>
-      </a>
-      <a class="page-top" href="#top">PAGE TOP ↑</a>
     </div>
-    <div class="footer-bottom">
-      <p>〒242-0022 神奈川県大和市柳橋1-10-7　TEL/FAX 046-212-2788</p>
-      <p>最終更新日：<time datetime="2026-07-11">2026年7月11日</time></p>
-      <p>© <span id="year"></span> TAKERU CONSTRUCTION.</p>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container position-relative">
+      <div class="row align-items-start g-5">
+        <div class="col-lg-5">
+          <div class="section-label text-white border-white mb-3">CONTACT</div>
+          <h2 class="section-title text-white">まずはお気軽にご相談ください</h2>
+          <p class="text-white-50">「何を相談すればよいか整理できていない」という段階でも大丈夫です。まずは無料でお困りごとをお聞きし、必要な方向性を一緒に整理します。</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-md-4"><div class="contact-card"><h3>Googleフォーム</h3><p>相談内容を整理して送信できます。</p><a class="btn-main w-100" href="https://docs.google.com/forms/d/e/1FAIpQLSeY7vEQuPhmpEKOT0bIdIyAukIUSVxdsXxL6--3Hf8r8HN2xQ/viewform" target="_blank" rel="noreferrer">開く</a></div></div>
+            <div class="col-md-4"><div class="contact-card"><h3>メール</h3><p>資料添付や詳しい相談はこちら。</p><a class="btn-main w-100" href="mailto:info@metachan.jp?subject=%E3%82%81%E3%81%9F%E3%81%A1%E3%82%83%E3%82%93DX%E7%9B%B8%E8%AB%87%E6%89%80%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">送る</a></div></div>
+            <div class="col-md-4"><div class="contact-card"><h3>LINE</h3><p>スマホから気軽に相談できます。</p><a class="btn-main w-100" href="https://lin.ee/Rb2nVNT" target="_blank" rel="noreferrer">相談する</a></div></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer-credit">
-      <span>since 2026/04/01 powered by</span>
-      <a href="https://metachan.jp/" target="_blank" rel="noopener noreferrer">
-        めたちゃんDX相談所
-      </a>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+        <div>© めたちゃんDX相談所</div>
+        <div>横浜・保土ヶ谷・上星川・川島町の地域密着DX支援</div>
+      </div>
+      <div class="mt-2 small text-white-50">
+        ホームページ開設日：2021/02/12
+      </div>
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <a class="back-to-top" href="#top" aria-label="トップへ戻る">↑</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbarCollapse = document.getElementById('navbarNav');
+      const navLinks = document.querySelectorAll('.navbar-collapse a');
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+            bsCollapse.hide();
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
